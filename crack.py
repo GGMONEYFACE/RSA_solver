@@ -1,4 +1,5 @@
 import RSA_script, Helpful, helppage, mymath
+from MyPrimes import primes_to_set
 
 #Quits from module back to main menu
 def quit_to_menu():
@@ -16,6 +17,14 @@ def find_q():
         print(f"Calculating q using N/p...")
         q = mymath.find_q(N, p)
         print(f"q = {q}")
+    else:
+        for p in primes_to_set.PRIMES[1]:  # Using the first set of primes
+            if N % p == 0:
+                q = N // p
+                Helpful.greenblock(f"Found factors: p = {p}, q = {q}")
+                return
+        print("No factors found in the provided prime set. We will be uploading a larger set of primes soon.")
+
 
 
 def find_d():

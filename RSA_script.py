@@ -1,8 +1,5 @@
-'''
-This program is currently in development but will eventually (hopefully) be an all-inclusive tool to solve RSA encyption CTF challenges
-'''
-
 #!/usr/bin/env python3
+
 ####################################################
 ## Authors: GGMONEYFACE                           ##
 ## Purpose: An RSA program for training/CTFs      ##
